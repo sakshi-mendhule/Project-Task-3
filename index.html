@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Webpage Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Interactive Webpage</h1>
+    <nav>
+      <button id="menuToggle">☰ Menu</button>
+      <ul id="menu" class="hidden">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#formSection">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="features">
+      <h2>Features</h2>
+      <p>Click the button below to see a surprise message!</p>
+      <button id="surpriseBtn">Show Surprise</button>
+      <p id="surpriseMsg" class="hidden"></p>
+    </section>
+
+    <section id="formSection">
+      <h2>Contact Us</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required minlength="3" />
+        <span class="error" id="nameError"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <span class="error" id="emailError"></span>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required minlength="10"></textarea>
+        <span class="error" id="messageError"></span>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="formSuccess" class="hidden success-msg">Thank you for contacting us!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Interactive Webpage Demo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
